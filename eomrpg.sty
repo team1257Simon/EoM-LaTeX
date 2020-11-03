@@ -269,11 +269,11 @@ cycle(0.8677,1051.4211) .. controls (1.0385,1051.4031) and (1.0481,1051.3911)
 }
 \newcounter{cnt}
 \newcommand*{\dice}[1]{%
-  \foreach \type/\num in #1%
+  \foreach \tpe / \num in {#1}%
   {%
-    \forloop{cnt}{0}{\value{ct} < \num}%
+    \forloop{cnt}{0}{\value{cnt} < \num}%
     {%
-      \IfStrEqCase{\type}%
+      \IfStrEqCase{\tpe}%
       {%
         {b}{\boost}
         {g}{\ability}
@@ -287,11 +287,11 @@ cycle(0.8677,1051.4211) .. controls (1.0385,1051.4031) and (1.0481,1051.3911)
   }%
 }
 \newcommand*{\results}[1]{%
-  \foreach \type/\num in #1%
+  \foreach \tpe / \num in {#1}%
   {%
-    \forloop{cnt}{0}{\value{ct} < \num}%
+    \forloop{cnt}{0}{\value{cnt} < \num}%
     {%
-      \IfStrEqCase{\type}%
+      \IfStrEqCase{\tpe}%
       {%
         {s}{\success}
         {a}{\advantage}
