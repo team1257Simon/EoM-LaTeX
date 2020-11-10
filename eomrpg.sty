@@ -304,3 +304,11 @@ cycle(0.8677,1051.4211) .. controls (1.0385,1051.4031) and (1.0481,1051.3911)
     }%
   }%
 }
+\newcommand*{\trait}[1]{%
+ [%
+ \forloop{cnt}{0}{\value{cnt} < #1}%
+ {%
+   \textbullet%
+  }%
+  ]%
+}
